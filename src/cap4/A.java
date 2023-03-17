@@ -3,7 +3,7 @@ package cap4;
 /**
  * <p>
  * </p>
- * 
+ *
  * @author imarc
  * @version 1.0 Created on 16 de mar de 2023
  */
@@ -23,8 +23,4 @@ public class A
 
 	int x, y;
 
-	{
-		this.x += 10;
-		this.y += 10;
-	}
 }

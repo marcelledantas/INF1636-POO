@@ -16,4 +16,9 @@ public class C
 		this.x += c;
 		this.y *= c;
 	}
+
+	{
+		this.x += 10;
+		this.y += 10;
+	}
 }
