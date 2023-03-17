@@ -14,7 +14,7 @@ public class EX0303
 	{
 		// System.out.println( obtemPi(3) ); // It cannot make a static reference to a non static
 		// method
-		System.out.println( Matematica.pi( 10 ) );
+		System.out.println( Matematica.pi( 1000000 ) );
 	}
 
 	public double obtemPi( final int n )
