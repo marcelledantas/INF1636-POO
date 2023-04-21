@@ -23,15 +23,26 @@ public class Voo
 			as = 'A';
 			for(int j = 0; j < na; j++) {
 				this.assentos[i][j] = new Assento(i + 1, as);
+				as++;
 			}
-			as++;
 		}
 	}
 	
 	public boolean reserva(int f, char a) {
-		Assento assentoReservar = this.assentos[f][a];
 		
-		if(assentoReservar.getEstado()) {
+		int i = f;
+		int j = a - 'A';
+		
+		if(f > this.nFila || f < 0) {
+			return false;
+		}
+		if(j < 0 || j > this.nAssentos) {
+			return false;
+		}
+		
+		Assento assentoReservar = this.assentos[i - 1][j];
+		
+		if(!assentoReservar.getEstado()) {
 			System.out.println( "Assento já está reservado" );
 			return false;
 		}
@@ -41,7 +52,21 @@ public class Voo
 	}
 	
 	public void imprimeMapa() {
+	    
+		System.out.printf( "     " );
+		for(int nAssento = 0; nAssento < this.nAssentos; nAssento++) {
+			System.out.printf( "%s ", (char)('A' + nAssento) );
+		}
+		
+		System.out.println( "" );
 		for(int i = 0; i < this.nFila; i++) {
+			
+			if(i < 9) {
+				System.out.printf( "0%d - ", i + 1 );
+			} else {
+				System.out.printf( "%d - ", i + 1  );
+			}
+			
 			for(int j = 0; j < this.nAssentos; j++) {
 				Assento currAssento = this.assentos[i][j];
 				if(currAssento.getEstado()) {
@@ -51,7 +76,10 @@ public class Voo
 					System.out.printf( "X " );
 				}
 			}
+			
+			System.out.printf( "\n" );
 		}
 	}
+	
 
 }

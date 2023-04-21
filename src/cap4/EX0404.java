@@ -21,6 +21,8 @@ public class EX0404
 		v.reserva(1,'B');
 		v.reserva(4,'C');
 		v.reserva(4,'D');
+		v.reserva(10,'A');
+
 		v.imprimeMapa();
 		
 	}
