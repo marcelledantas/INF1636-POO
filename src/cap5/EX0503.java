@@ -20,7 +20,7 @@ public class EX0503
 		{
 		// o printf a seguir deve exibir o nome e o
 		// imposto que o contribuinte irá pagar
-		System.out.printf("%-20s %9.2f\n", lst[i].nome, lst[i].rendaBrt + lst[i].calcImposto());
+		System.out.printf("%-20s %9.2f\n", lst[i].getNome(), lst[i].calcImposto());
 		
 		}
 		

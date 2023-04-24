@@ -25,19 +25,19 @@ public class PFisica
 	public double calcImposto() {
 		double imposto = 0;
 		if(rendaBrt >= 0.0 && rendaBrt <= 1.400) {
-			imposto = 0.00 * rendaBrt; 
+			imposto = 0.00 * rendaBrt + rendaBrt; 
 		}
 		else if(rendaBrt > 1400.00 && rendaBrt <= 2100.00) {
-			imposto = 0.10 * rendaBrt;
+			imposto = 0.10 * rendaBrt + rendaBrt;
 		}
 		else if(rendaBrt > 2100.00 && rendaBrt <= 2800.00) {
-			imposto = 0.15 * rendaBrt;
+			imposto = 0.15 * rendaBrt + rendaBrt;
 		}
 		else if(rendaBrt > 2800.00 && rendaBrt <= 3600.00) {
-			imposto = 0.25 * rendaBrt;
+			imposto = 0.25 * rendaBrt + rendaBrt;
 		}
 		else {
-			imposto = 0.30 * rendaBrt;
+			imposto = 0.30 * rendaBrt + rendaBrt;
 		}
 		
 		return imposto;

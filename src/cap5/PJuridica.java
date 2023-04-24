@@ -18,6 +18,6 @@ public class PJuridica extends Contribuinte
 	}
 	public double calcImposto() {
 		// Cálculo do imposto
-		return 0.10 * rendaBrt;
+		return 0.10 * rendaBrt + rendaBrt;
 	}
 }
