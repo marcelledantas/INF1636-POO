@@ -10,7 +10,18 @@ package cap5;
 public class C1
 	extends C
 {
+	{
+		System.out.println( "C1: Instance initializer block executed" );
+	}
 
+	static{
+		System.out.println( "C1: Static block executed 1" );
+	}
+	
+	static{
+		System.out.println( "C1: Static block executed 2" );
+	}
+	
 	public C1()
 	{
 		this.v1 = this.v2 = 10;
